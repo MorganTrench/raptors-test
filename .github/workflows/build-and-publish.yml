@@ -5,16 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/checkout@v3
-        with: 
-          path: raptors-test-content
-          repository: 'MorganTrench/raptors-test-content'
-          token: ${{ secrets.ACCESS_REPOS }}
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
       - run: npm install
-      - run: cp -r raptors-test-content/* src/routes/posts/
+      - run: cp -r cms/posts/* src/routes/posts/
       - run: npm run build
       - name: deploy 
         uses: JamesIves/github-pages-deploy-action@v4.2.5
