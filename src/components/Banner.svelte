@@ -25,6 +25,8 @@ style="background-position-y: {0.65 * scrollY - 50}px;"
       overflow: hidden;
   
       background: url("/images/banner.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
   
       position: relative;
   
